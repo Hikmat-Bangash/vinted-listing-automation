@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import jsconfigPaths from 'vite-jsconfig-paths';
+import path from 'path';
 
 export default defineConfig(() => {
   // depending on your application, base can also be "/"
@@ -26,23 +26,11 @@ export default defineConfig(() => {
     },
     resolve: {
       alias: {
-        // { find: '', replacement: path.resolve(__dirname, 'src') },
-        // {
-        //   find: /^~(.+)/,
-        //   replacement: path.join(process.cwd(), 'node_modules/$1')
-        // },
-        // {
-        //   find: /^src(.+)/,
-        //   replacement: path.join(process.cwd(), 'src/$1')
-        // }
-        // {
-        //   find: 'assets',
-        //   replacement: path.join(process.cwd(), 'src/assets')
-        // },
-        '@tabler/icons-react': '@tabler/icons-react/dist/esm/icons/index.mjs'
+        '@tabler/icons-react': '@tabler/icons-react/dist/esm/icons/index.mjs',
+        'src': path.resolve(__dirname, './src')
       }
     },
     base: '/',
-    plugins: [react(), jsconfigPaths()]
+    plugins: [react()]
   };
 });

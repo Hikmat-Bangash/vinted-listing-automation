@@ -6,12 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:test": "vite build --mode production",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/inter": "^5.0.16",
+    "@fontsource/poppins": "^5.0.8",
+    "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.14.19",
     "@mui/material": "^5.14.20",
     "@mui/x-data-grid": "^6.18.2",
@@ -30,6 +34,6 @@
     "eslint-plugin-react-refresh": "^0.4.4",
     "sass": "^1.69.5",
     "vite": "^5.0.0",
-    "vite-jsconfig-paths": "^1.0.1"
+    "vite-jsconfig-paths": "^1.0.0"
   }
 }
